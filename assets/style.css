@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 200;
+    color: #331E05;
+}
+
+#logo {
+    width: 400px;
+    position: relative;
+    right: 150px;
+}
+
+h3 {
+    padding-top: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 400
+}
+
+#game-header {
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#instruction {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#game-box {
+    background: rgba(194, 192, 192, 0.801);
+    width: 800px;
+    padding-bottom: 20px;
+}
+
+#baby-duck {
+    float: right;
+    height: 400px;
+    width: 400px;
+    position: relative;
+    top: -60px;
+    left: 100px;
+    
+}
+
+#current-word {
+    text-align: center;
+}
