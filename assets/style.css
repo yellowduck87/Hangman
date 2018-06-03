@@ -5,22 +5,36 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    line-height: 40px;
+    line-height: 30px;
     font-weight: 200;
     color: #331E05;
 }
 
+p {
+    padding-left: 20px;
+    text-align: left;
+}
 #logo {
-    width: 400px;
+    width: 500px;
     position: relative;
     right: 150px;
+}
+
+#logo-header {
+    padding-bottom: 0px;
 }
 
 h3 {
     padding-top: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 30px;
-    font-weight: 400
+    font-weight: 400;
+}
+
+#sub-head {
+    font-weight: 500;
+    position: relative;
+    top: -30px;
 }
 
 #game-header {
@@ -42,7 +56,7 @@ h3 {
 }
 
 #game-box {
-    background: rgba(194, 192, 192, 0.801);
+    background:#e9ecef;
     width: 800px;
     padding-bottom: 20px;
 }
@@ -58,5 +72,7 @@ h3 {
 }
 
 #current-word {
-    text-align: center;
+    text-align: left;
+    padding-bottom: 10px;
+    margin: 0 auto;
 }

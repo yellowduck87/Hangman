@@ -13,12 +13,12 @@
 </head>
 
 <body>
-    <div class="jumbotron">
-        <img src="assets/duckducknoose.png" alt="logo" id="logo">
-        <h3>A Game of Hangman That Will Quack You up!</h3>
+    <div class="jumbotron" id="logo-header">
+        <img src="assets/images/duckducknoose.png" alt="logo" id="logo">
+        <h3 id="sub-head">A Game of Hangman That Will Quack You up!</h3>
     </div>
     <div class="container" id="game-box">
-        <img src="assets/duckling.png" alt="baby ducky" id="baby-duck">
+        <img src="assets/images/duckling.png" alt="baby ducky" id="baby-duck">
         <div class="row">
             <div class="col-sm-12" id="game-header">
                 Play and save the ducky!
@@ -32,32 +32,33 @@
         <div class="container">
         <div class="row" id="current-word">
             <div class="col-sm-12">
-                Current word
+             <p>Current word:</p>
             </div>
         </div>
         <div class="row" id="letters-guessed">
             <div class="col-sm-12">
+                <p>Letters Guessed:</p>
             </div>
         </div>
         <div class="row" id="wins">
             <div class="col-sm-12">
-                Wins:
+                <p>Wins:</p>
             </div>
         </div>
         <div class="row" id="losses">
             <div class="col-sm-12">
-                Losses:
+                <p>Losses:</p>
             </div>
         </div>
         <div class="row" id="lives">
             <div class="col-sm-12">
-                Lives:
+                <p>Lives:</p>
             </div>
         </div>
         </div>
     </div>
     </div>
-    <script type="javascript" src="assets/javascript/script.js"></script>
+    <script type="text/javascript" src="assets/javascript/script.js"></script>
 </body>
 
 </html>
