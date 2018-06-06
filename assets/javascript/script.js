@@ -15,11 +15,8 @@ var lossesVar = 0;
 //random choice from wordBank array
 var selectedWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 usedWords.push(selectedWord);
+ var userGuess;
 
-if (selectedWord === usedWords) {
-    var selectedWord = wordBank[Math.floor(Math.random() * wordBank.length)];
-
-}
 console.log(selectedWord);
 
 
@@ -43,14 +40,25 @@ function gameReset() {
     arrayedWord = [];
     selectedWord = [];
     guessedLetters = [];
+    guessed = [];
+    arrayedBlanks = [];
 
     selectedWord = wordBank[Math.floor(Math.random() * wordBank.length)];
     usedWords.push(selectedWord);
 
-    if (selectedWord === usedWords) {
-        selectedWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+    // while (selectedWord === usedWords) {
+    //     selectedWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+    // }
+    for (var g = 0; g < selectedWord.length; g++) {
+
+        if (selectedWord[g] === userGuess) {
+            arrayedBlanks[g] = userGuess;
+            guesses = arrayedBlanks.join("");
+
+        }
 
     }
+    guesses = arrayedBlanks.join("");
 
 }
 
@@ -69,37 +77,41 @@ document.onkeyup = function () {
         alert("Please select a letter from the alphabet.");
     } else {
         guessedLetters.push(userGuess);
+
+
         for (var g = 0; g < selectedWord.length; g++) {
 
-
         
+            if (guesses === selectedWord) {
+                winsVar++;
+
+                console.log(guesses)
+                alert("good job! the word was " + selectedWord + "!");
+                gameReset();
+                //random word generator.
+            }
+
+            // if (selectedWord[g]) {
+            //     livesVar--;
+            // }
+
 
             if (lives < 1) {
                 lossesVar++;
                 gameReset();
             }
-
+            
             if (selectedWord[g] === userGuess) {
                 arrayedBlanks[g] = userGuess;
                 guesses = arrayedBlanks.join("");
-                // } else {
-                //         livesVar--;
-                //     }
 
-            }
-
-            if (guesses === selectedWord) {
-                winsVar++;
-                gameReset();
-                alert("good job!");
-                //random word generator.
+            } else {
+                livesVar--;
             }
 
 
 
-            // if (userGuess !== selectedWord[g]) {
-            //     livesVar--;
-            // }
+
         }
 
 
