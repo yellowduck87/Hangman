@@ -1,11 +1,10 @@
-var wordBank = ["mallard", "crested", "webbed", "bill", "waterproof"];
+var wordBank = ["mallard", "crested", "webbed", "bill", "waterproof", "feather", "egg", "waterfowl", "quack", "duckling", "canvasback", "whistling", "plumed", "downy", "flight", "migration", "swan", "goose"];
 var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 var usedWords = [];
 var guessedLetters = [];
 var selectedWord = [];
 
-var onlyDashes = 0;
 var livesVar = 10;
 var winsVar = 0;
 var lossesVar = 0;
@@ -15,6 +14,9 @@ var guesses;
 
 var selectedWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 usedWords.push(selectedWord);
+
+console.log(usedWords);
+// wordBank.splice(selectedWord);
 
 var userGuess;
 
@@ -27,7 +29,6 @@ for (var i = 0; i < selectedWord.length; i++) {
     document.getElementById("current-word").innerHTML = "<p>Current Word: </p>" + guesses;
 
 }
-// console.log(arrayedBlanks);
 
 function gameReset() {
     arrayedWord = [];
@@ -38,8 +39,14 @@ function gameReset() {
     livesVar = 10;
 
     selectedWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+    console.log(selectedWord);
+    // while (wordBank.includes(usedWords)) {
+    //     selectedWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+    // }
     usedWords.push(selectedWord);
-    
+
+    console.log(usedWords);
+
     for (var i = 0; i < selectedWord.length; i++) {
         arrayedBlanks[i] = "_ ";
     }
@@ -70,10 +77,13 @@ document.onkeyup = function () {
     // console.log(userGuess);
 
 
-
-
     if (!letters.includes(userGuess)) {
         alert("Please select a letter from the alphabet.");
+    }
+
+    else if (guessedLetters.includes(userGuess)) {
+        alert("You've already guessed " + userGuess);
+
     } else {
         guessedLetters.push(userGuess);
 
